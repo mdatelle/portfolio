@@ -67,6 +67,12 @@
     color: #dc3545;
 }
 
+.message {
+    color: #009900;
+    margin: 0.625rem 0;
+    padding: 1rem;
+}
+
 .sendButton {
     padding: 1rem;
     text-align: center;

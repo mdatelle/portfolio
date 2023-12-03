@@ -1,6 +1,6 @@
 'use client';
 
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import { Button } from '@/components/Button/Button';
 import emailjs from '@emailjs/browser';
 import { mailConfig } from '@/lib/mail';
@@ -8,15 +8,15 @@ import styles from './ContactForm.module.css';
 import { useForm } from 'react-hook-form';
 
 export const ContactForm = () => {
-    const [isSuccess, setIsSuccess] = useState(false);
+    const [isSuccess, setIsSuccess] = useState<boolean>(false);
     const form = useRef<HTMLFormElement>(null);
     const currentForm = form.current;
     const {
         register,
         handleSubmit,
         reset,
-        formState: { errors }
-    } = useForm();
+        formState: { errors, isDirty }
+    } = useForm({defaultValues: {name: '', email: '', message: ''}});
 
     const sendEmail = () => {
         const { publicId, serviceId, templateId } = mailConfig;
@@ -25,7 +25,9 @@ export const ContactForm = () => {
 
         emailjs.sendForm(serviceId, templateId, currentForm, publicId).then(
             (result) => {
-                console.log(result.text);
+                if (result.status === 200) {
+                    setIsSuccess(true);
+                }
                 reset();
             },
             (error) => {
@@ -34,6 +36,12 @@ export const ContactForm = () => {
         );
     };
 
+    useEffect(() => {
+        if (isDirty) {
+            setIsSuccess(false);
+        }
+    }, [isDirty]);
+
     return (
         <div className={styles.container}>
             <form ref={form} onSubmit={handleSubmit(sendEmail)}>
@@ -41,6 +49,7 @@ export const ContactForm = () => {
                     Feel free to reach out if you have any questions or if you’re interested in
                     working with me on your next project.
                 </p>
+                {isSuccess && <p className={styles.message}>Message successfully sent!</p>}
                 <div className={styles.group}>
                     <label htmlFor="name">
                         Name <span>*</span>
