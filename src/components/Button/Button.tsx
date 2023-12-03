@@ -1,9 +1,15 @@
 import { ReactNode } from 'react';
 import styles from './Button.module.css';
 
-export const Button = ({ children }: { children: ReactNode }) => {
+interface IButtonProps {
+    children: ReactNode;
+    type: 'button' | 'submit' | 'reset' | undefined;
+    value?: string;
+}
+
+export const Button = ({ children, type = 'button', value }: IButtonProps) => {
     return (
-        <button type="button" className={styles.button}>
+        <button type={type} className={styles.button} value={value}>
             {children}
         </button>
     );
