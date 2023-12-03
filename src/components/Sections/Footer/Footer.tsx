@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import Image from "next/image";
+import Image from 'next/image';
 
 export const Footer = () => {
     return (
@@ -12,7 +12,7 @@ export const Footer = () => {
                 src="/logo.svg"
                 width={62}
             />
-            <span className={styles.name}>© {(new Date().getFullYear())} Michael Datelle</span>
+            <span className={styles.name}>© {new Date().getFullYear()} Michael Datelle</span>
         </footer>
     );
 };
