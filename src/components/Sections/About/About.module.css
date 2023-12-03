@@ -1,0 +1,38 @@
+.container {
+    background-color: var(--background-secondary);
+    display: flex;
+    justify-content: center;
+    padding: 4.375rem 9.375rem;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.container p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.leftContent {
+    margin-right: 4rem;
+    width: 50%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.rightContent {
+    width: 50%;
+}
+
+.section {
+    margin-bottom: 11.563rem;
+}
