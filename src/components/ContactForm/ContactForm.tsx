@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/Button/Button';
 import emailjs from '@emailjs/browser';
 import { mailConfig } from '@/lib/mail';
@@ -16,7 +16,7 @@ export const ContactForm = () => {
         handleSubmit,
         reset,
         formState: { errors, isDirty }
-    } = useForm({defaultValues: {name: '', email: '', message: ''}});
+    } = useForm({ defaultValues: { name: '', email: '', message: '' } });
 
     const sendEmail = () => {
         const { publicId, serviceId, templateId } = mailConfig;
