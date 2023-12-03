@@ -6,7 +6,7 @@ import styles from './About.module.css';
 
 export const About = () => {
     return (
-        <section className={styles.section}>
+        <section id="about" className={styles.section}>
             <SectionTitle title="About" subtitle="What I do for a living" />
             <div className={styles.container}>
                 <div className={styles.leftContent}>

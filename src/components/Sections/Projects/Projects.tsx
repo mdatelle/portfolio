@@ -6,7 +6,7 @@ import { projects } from '@/lib/projects';
 
 export const Projects = () => {
     return (
-        <section className={styles.section}>
+        <section id="projects" className={styles.section}>
             <SectionTitle title="Projects" subtitle="Recent projects I’ve worked on" />
             <div className={styles.container}>
                 <div className={styles.projects}>

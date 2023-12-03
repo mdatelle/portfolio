@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 interface IButtonProps {
     children: ReactNode;
-    type: 'button' | 'submit' | 'reset' | undefined;
+    type?: 'button' | 'submit' | 'reset' | undefined;
     value?: string;
 }
 

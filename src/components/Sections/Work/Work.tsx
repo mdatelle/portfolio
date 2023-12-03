@@ -4,7 +4,7 @@ import styles from './Work.module.css';
 
 export const Work = () => {
     return (
-        <section className={styles.section}>
+        <section id="work" className={styles.section}>
             <SectionTitle title="Work" subtitle="My professional work experience" />
             <Resume />
         </section>

@@ -1,0 +1,12 @@
+.container {
+    align-items: center;
+    background-color: var(--background-secondary);
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+}
+
+.container span {
+    margin-top: 10px;
+}

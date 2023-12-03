@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import {useRef, useState} from 'react';
 import { Button } from '@/components/Button/Button';
 import emailjs from '@emailjs/browser';
 import { mailConfig } from '@/lib/mail';
@@ -8,6 +8,7 @@ import styles from './ContactForm.module.css';
 import { useForm } from 'react-hook-form';
 
 export const ContactForm = () => {
+    const [isSuccess, setIsSuccess] = useState(false);
     const form = useRef<HTMLFormElement>(null);
     const currentForm = form.current;
     const {
@@ -19,7 +20,6 @@ export const ContactForm = () => {
 
     const sendEmail = () => {
         const { publicId, serviceId, templateId } = mailConfig;
-        console.log('mailConfig', mailConfig);
 
         if (currentForm === null) return;
 
