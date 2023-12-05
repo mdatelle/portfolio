@@ -3,6 +3,11 @@
     display: flex;
     justify-content: center;
     padding: 4.375rem 9.375rem;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        padding: 4.375rem 3rem;
+    }
 }
 
 .companyList {
@@ -11,12 +16,21 @@
     flex-direction: column;
     margin: 0 10px;
     width: 25%;
+
+    @media (max-width: 1200px) {
+        display: none;
+        width: 100%;
+    }
 }
 
 .resumeItem {
     display: none;
     margin: 0 10px;
     width: 75%;
+
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
 }
 
 .resumeItem.active {
@@ -56,6 +70,10 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0.625rem;
+
+    @media (max-width: 1200px) {
+        font-size: 1.1rem;
+    }
 }
 
 .tab {

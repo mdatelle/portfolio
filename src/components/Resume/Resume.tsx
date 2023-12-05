@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Button } from '@/components/Button/Button';
 import { experience } from '@/lib/experience';
 import Image from 'next/image';
+import { Select } from '@/components/Select/Select';
 import styles from '@/components/Resume/Resume.module.css';
 import tabDot from '../../../public/tab-dot.svg';
 import tabDotActive from '../../../public/tab-dot-active.svg';
@@ -28,6 +29,9 @@ export const Resume = () => {
     const handleOnClick = (index: number) => {
         setActiveTab(index);
     };
+    const handleOnSelect = useCallback((selectedOption: number) => {
+        setActiveTab(selectedOption);
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -54,18 +58,26 @@ export const Resume = () => {
                     </a>
                 </div>
             </div>
+            <Select options={experience} onSelect={handleOnSelect}>
+                {experience[activeTab].company}
+                <Image alt="Select Icon" height={24} priority src="/chevron-down.svg" width={24} />
+            </Select>
             {experience.map(({ company, period, position, Mdx }, index) => (
-                <div
-                    key={index}
-                    className={`${styles.resumeItem} ${activeTab === index ? styles.active : ''}`}
-                    role="tabcontent"
-                    aria-selected={activeTab === index}>
-                    <h3>
-                        {company} - {position}
-                    </h3>
-                    <span>{period}</span>
-                    <Mdx />
-                </div>
+                <>
+                    <div
+                        key={index}
+                        className={`${styles.resumeItem} ${
+                            activeTab === index ? styles.active : ''
+                        }`}
+                        role="tabcontent"
+                        aria-selected={activeTab === index}>
+                        <h3>
+                            {company} - {position}
+                        </h3>
+                        <span>{period}</span>
+                        <Mdx />
+                    </div>
+                </>
             ))}
         </div>
     );

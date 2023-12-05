@@ -7,6 +7,10 @@
 .subtitle {
     color: var(--color-primary);
     font-size: 1.25rem;
+
+    @media (max-width: 1200px) {
+        font-size: 1.3rem;
+    }
 }
 
 .title {

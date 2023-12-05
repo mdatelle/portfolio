@@ -13,5 +13,6 @@
 
     @media (max-width: 1200px) {
         justify-content: flex-start;
+        margin-top: 10px;
     }
 }
