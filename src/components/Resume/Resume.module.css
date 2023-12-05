@@ -6,7 +6,7 @@
 
     @media (max-width: 1200px) {
         flex-direction: column;
-        padding: 4.375rem 3rem;
+        padding: 4.375rem 2rem;
     }
 }
 

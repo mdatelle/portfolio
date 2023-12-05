@@ -6,7 +6,7 @@
 
     @media (max-width: 1200px) {
         flex-direction: column;
-        padding: 4.375rem 3rem;
+        padding: 4.375rem 2rem;
     }
 }
 
@@ -54,7 +54,7 @@
 .section {
     margin-bottom: 11.563rem;
 
-    @media (max-width: 1200px) {
-        margin: 11.563rem 0;
+    @media (max-width: 768px) {
+        margin: 6rem 0;
     }
 }

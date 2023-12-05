@@ -10,7 +10,6 @@
     width: 40%;
 
     @media (max-width: 1200px) {
-        padding: 0 3rem;
         width: 100%;
     }
 }
@@ -79,7 +78,7 @@
 }
 
 .sendButton {
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
     width: 100%;
 }

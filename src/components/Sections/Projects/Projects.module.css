@@ -62,6 +62,7 @@
 .projectImage {
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .projects {
@@ -72,12 +73,16 @@
 
     @media (max-width: 1200px) {
         flex-direction: column;
-        padding: 0 4rem;
+        padding: 0 2rem;
     }
 }
 
 .section {
     margin-bottom: 11.563rem;
+
+    @media (max-width: 768px) {
+        margin-bottom: 6rem;
+    }
 }
 
 .title {
