@@ -58,6 +58,7 @@ export const Resume = () => {
                     </a>
                 </div>
             </div>
+            <div className={styles.select}></div>
             <Select options={experience} onSelect={handleOnSelect}>
                 {experience[activeTab].company}
                 <Image alt="Select Icon" height={24} priority src="/chevron-down.svg" width={24} />

@@ -76,6 +76,14 @@
     }
 }
 
+.select {
+    display: none;
+
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+
 .tab {
     align-items: flex-start;
     display: flex;
