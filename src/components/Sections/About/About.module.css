@@ -3,6 +3,11 @@
     display: flex;
     justify-content: center;
     padding: 4.375rem 9.375rem;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        padding: 4.375rem 3rem;
+    }
 }
 
 .container h3 {
@@ -21,18 +26,35 @@
 .leftContent {
     margin-right: 4rem;
     width: 50%;
+
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
 }
 
 .links {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
 }
 
 .rightContent {
     width: 50%;
+
+    @media (max-width: 1200px) {
+        margin-top: 3rem;
+        width: 100%;
+    }
 }
 
 .section {
     margin-bottom: 11.563rem;
+
+    @media (max-width: 1200px) {
+        margin: 11.563rem 0;
+    }
 }

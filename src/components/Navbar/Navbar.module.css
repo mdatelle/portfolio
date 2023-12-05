@@ -1,4 +1,4 @@
-.image {
+.logo {
     margin-right: 10px;
 }
 
@@ -7,31 +7,6 @@
     display: flex;
     justify-content: flex-start;
     width: fit-content;
-}
-
-.list {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.listItem {
-    margin: 0 1.8rem;
-}
-
-.listItemLink {
-    color: #000;
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.listItemLink:hover {
-    color: #ed5537;
 }
 
 .name {
@@ -48,6 +23,11 @@
     margin: auto;
     padding: 0 9.375rem;
     width: 100%;
+
+    @media (max-width: 1200px) {
+        padding: 0 3rem;
+        position: relative;
+    }
 }
 
 .rightContent {
@@ -55,4 +35,33 @@
     display: flex;
     justify-content: flex-end;
     width: fit-content;
+}
+
+.rightContent .list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.rightContent .list a {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.rightContent .list a:hover {
+    color: #ed5537;
+}
+
+.rightContent .list li {
+    margin: 0 1.8rem;
 }

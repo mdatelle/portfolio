@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import { navItems } from '@/lib/navItems';
+import { SmallScreenMenu } from '@/components/SmallScreenMenu/SmallScreenMenu';
 import styles from './Navbar.module.css';
 
 export const Navbar = () => {
@@ -8,7 +11,7 @@ export const Navbar = () => {
             <div className={styles.leftContent}>
                 <Image
                     alt="MD Logo"
-                    className={styles.image}
+                    className={styles.logo}
                     height={52}
                     priority
                     src="/logo.svg"
@@ -26,6 +29,7 @@ export const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+                <SmallScreenMenu items={navItems} />
             </div>
         </div>
     );

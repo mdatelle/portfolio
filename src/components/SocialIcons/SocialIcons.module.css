@@ -1,9 +1,17 @@
 .icon {
     margin-left: 20px;
+
+    @media (max-width: 1200px) {
+        margin: 20px 20px 0 0;
+    }
 }
 
 .iconBlock {
     align-items: center;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1200px) {
+        justify-content: flex-start;
+    }
 }
