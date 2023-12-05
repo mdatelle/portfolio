@@ -33,7 +33,9 @@ export const About = () => {
                         accessible for users that want to stay organized.{' '}
                     </p>
                     <div className={styles.links}>
-                        <Button>Get In Touch</Button>
+                        <a href={'#contact'}>
+                            <Button>Get In Touch</Button>
+                        </a>
                         <SocialIcons />
                     </div>
                 </div>

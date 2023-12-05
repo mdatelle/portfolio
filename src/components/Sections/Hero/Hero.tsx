@@ -12,7 +12,9 @@ export const Hero = () => {
                 I design and build <span className={styles.highlight}>experiences</span> users love
             </h2>
             <div className={styles.image} />
-            <Button>Recent Projects</Button>
+            <a href={'#projects'}>
+                <Button>Recent Projects</Button>
+            </a>
         </section>
     );
 };
