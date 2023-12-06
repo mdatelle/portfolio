@@ -8,8 +8,7 @@
 
 This is the first version of my personal website [https://www.datelle.net](https://www.datelle.net).
 It's built with Next.js and styled using CSS modules. I wanted to keep this site as simple as possible, so I didn't use
-any CSS frameworks or libraries, although I did keep the pre-bundled Tailwind CSS dependency that came with Next.js.
-The only other 3rd party dependencies are EmailJS and React Hook Form used for the contact form.
+any CSS frameworks or libraries, although I did keep the pre-bundled Tailwind CSS dependency that came with Next.js as part of the project.
 
 This will be an ongoing project, and I'll be adding more features and content as time goes on. I'm also planning on
 adding a blog section to the site at some point.
