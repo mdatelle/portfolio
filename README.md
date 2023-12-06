@@ -1,10 +1,10 @@
 <br />
 
-<div style="text-align: center">
+<p align="center">
+  <img alt="logo" width="100" height="100" src="public%2Flogo.svg">
+</p>
 
-![logo.svg](public%2Flogo.svg)
-
-</div>
+<br />
 
 This is the first version of my personal website [https://www.datelle.net](https://www.datelle.net).
 It's built with Next.js and styled using CSS modules. I wanted to keep this site as simple as possible, so I didn't use
