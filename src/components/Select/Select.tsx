@@ -6,7 +6,7 @@ type Option = {
 };
 
 interface ISelectProps {
-    children: ReactNode;
+    children?: ReactNode;
     onSelect?: (selectedOption: number) => void;
     options: Option[];
 }
