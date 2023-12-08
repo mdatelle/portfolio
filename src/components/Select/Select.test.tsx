@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { Select } from './Select';
-import '@testing-library/jest-dom';
 import { jest } from '@jest/globals';
 import { MDXProps } from 'mdx/types';
+import { Select } from './Select';
+import '@testing-library/jest-dom';
 
 const mdxFile = jest.fn() as (props: MDXProps) => JSX.Element;
 
