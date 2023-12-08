@@ -1,6 +1,6 @@
 import EarlierPositions from '../mdx/earlier.mdx';
 import Ihg from '../mdx/ihg.mdx';
-import InfoTycoon from '../mdx/infortycoon.mdx';
+import InfoTycoon from '../mdx/infotycoon.mdx';
 import Mfg from '../mdx/mfg.mdx';
 import NationalNet from '../mdx/nationalnet.mdx';
 import Pvm from '../mdx/pvm.mdx';

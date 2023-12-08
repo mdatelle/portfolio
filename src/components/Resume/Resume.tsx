@@ -1,9 +1,9 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { ReactElement, useCallback, useState } from 'react';
 import { Button } from '@/components/Button/Button';
-import { experience } from '@/lib/experience';
 import Image from 'next/image';
+import { MDXProps } from 'mdx/types';
 import { Select } from '@/components/Select/Select';
 import styles from '@/components/Resume/Resume.module.css';
 import tabDot from '../../../public/tab-dot.svg';
@@ -11,7 +11,18 @@ import tabDotActive from '../../../public/tab-dot-active.svg';
 import tabLineActive from '../../../public/tab-line-active.svg';
 import tabLine from '../../../public/tab-line.svg';
 
-export const Resume = () => {
+type Experience = {
+    company: string;
+    period: string;
+    position: string;
+    Mdx: (props: MDXProps) => ReactElement;
+};
+
+interface IResumeProps {
+    experience: Experience[];
+}
+
+export const Resume = ({ experience }: IResumeProps) => {
     const [activeTab, setActiveTab] = useState<number>(0);
     const getActiveTabImage = (index: number) => {
         const length: number = experience.length - 1;
@@ -71,21 +82,17 @@ export const Resume = () => {
                 </Select>
             </div>
             {experience.map(({ company, period, position, Mdx }, index) => (
-                <>
-                    <div
-                        key={index}
-                        className={`${styles.resumeItem} ${
-                            activeTab === index ? styles.active : ''
-                        }`}
-                        role="tabcontent"
-                        aria-selected={activeTab === index}>
-                        <h3>
-                            {company} - {position}
-                        </h3>
-                        <span>{period}</span>
-                        <Mdx />
-                    </div>
-                </>
+                <div
+                    key={index}
+                    className={`${styles.resumeItem} ${activeTab === index ? styles.active : ''}`}
+                    role="tabcontent"
+                    aria-selected={activeTab === index}>
+                    <h3>
+                        {company} - {position}
+                    </h3>
+                    <span>{period}</span>
+                    <Mdx />
+                </div>
             ))}
         </div>
     );
