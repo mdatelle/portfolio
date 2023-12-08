@@ -2,6 +2,8 @@ import { Button } from '@/components/Button/Button';
 import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 import { Skills } from '@/components/Skills/Skills';
 import { SocialIcons } from '@/components/SocialIcons/SocialIcons';
+import { skills } from '@/lib/skills';
+import { socialIcons } from '@/lib/socialIcons';
 import styles from './About.module.css';
 
 export const About = () => {
@@ -36,12 +38,12 @@ export const About = () => {
                         <a href={'#contact'}>
                             <Button>Get In Touch</Button>
                         </a>
-                        <SocialIcons />
+                        <SocialIcons icons={socialIcons} />
                     </div>
                 </div>
                 <div className={styles.rightContent}>
                     <h3>My Skill Set</h3>
-                    <Skills />
+                    <Skills skills={skills} />
                 </div>
             </div>
         </section>
