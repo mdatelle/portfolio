@@ -64,7 +64,10 @@ export const Resume = ({ experience }: IResumeProps) => {
                             <Image alt="Tab line image" src={getActiveTabImage(index)} />
                         </div>
                     ))}
-                    <a href={'/michael-datelle.pdf'} download="michael-datelle.pdf" target="_blank">
+                    <a
+                        href={'/michael-datelle.docx'}
+                        download="michael-datelle.docx"
+                        target="_blank">
                         <Button>Download Full Resume</Button>
                     </a>
                 </div>

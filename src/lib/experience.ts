@@ -1,11 +1,9 @@
 import EarlierPositions from '../mdx/earlier.mdx';
-import Ihg from '../mdx/ihg.mdx';
 import InfoTycoon from '../mdx/infotycoon.mdx';
-import Mfg from '../mdx/mfg.mdx';
-import NationalNet from '../mdx/nationalnet.mdx';
 import Pvm from '../mdx/pvm.mdx';
 import Sharecare from '../mdx/sharecare.mdx';
 import ShootProof from '../mdx/shootproof.mdx';
+import Stashit from '../mdx/stashit.mdx';
 
 export const experience = [
     {
@@ -13,6 +11,12 @@ export const experience = [
         position: 'Sr. Engineer',
         period: 'Sep 2022 - Present',
         Mdx: Pvm
+    },
+    {
+        company: 'Stashit',
+        position: 'Founder',
+        period: 'Oct 2021 - Present',
+        Mdx: Stashit
     },
     {
         company: 'ShootProof',
@@ -33,26 +37,8 @@ export const experience = [
         Mdx: Sharecare
     },
     {
-        company: 'MFG',
-        position: 'Creative Lead',
-        period: 'Jun 2011 - Mar 2012',
-        Mdx: Mfg
-    },
-    {
-        company: 'IHG',
-        position: 'UI Engineer - Contract',
-        period: 'Nov 2010 - Jun 2011',
-        Mdx: Ihg
-    },
-    {
-        company: 'NationalNet',
-        position: 'Sr. Web Designer',
-        period: 'Apr 2008 - Jul 2010',
-        Mdx: NationalNet
-    },
-    {
         company: 'Early Career',
-        position: '2000 - 2008',
+        position: '2000 - 2012',
         period: '',
         Mdx: EarlierPositions
     }
